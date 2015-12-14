@@ -2,12 +2,7 @@
 
 import sys
 import argparse
-import numpy as np
 import desdb
-
-import suchyta_utils as es
-import suchyta_utils.mpi as mpi
-
 
 def SetupParser():
     parser = argparse.ArgumentParser()
