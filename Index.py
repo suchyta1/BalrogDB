@@ -27,7 +27,7 @@ def GetArgs():
 if __name__=='__main__': 
 
     args = GetArgs()
-    tables = ['truth_g', 'sim_g', 'nosim_g']
+    tables = ['truth', 'sim', 'nosim']
     tnames = ['t','s','n']
     columns = ['balrog_index','tilename']
     cnames = ['b','t']
