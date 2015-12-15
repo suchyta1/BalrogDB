@@ -4,6 +4,7 @@ import sys
 import argparse
 import desdb
 import suchyta_utils as es
+import numpy as np
 
 def SetupParser():
     parser = argparse.ArgumentParser()
@@ -67,7 +68,10 @@ if __name__=='__main__':
         print cmd
         cur.quick(cmd)
     """
-
+    
+    added = {}
+    added['index'] = []
+    added['table'] = []
 
     # Add indexes in each table on columns
     for i in range(len(tables)):
@@ -85,6 +89,8 @@ if __name__=='__main__':
             elif (not args.drop) and (not found) and (not ((j==0) and (i==0))):
                 cmd = 'CREATE INDEX %s on %s (%s)'%(iname, tname, columns[j])
                 docmd = True
+                added['table'].append(tname)
+                added['index'].append(iname)
             if docmd:
                 print cmd
                 cur.quick(cmd)
@@ -103,6 +109,8 @@ if __name__=='__main__':
         elif (not args.drop) and (not found):
             cmd = "CREATE BITMAP INDEX %s ON %s(%s.%s) FROM %s, %s WHERE %s.balrog_index=%s.balrog_index" %(iname, sim,truth,columns[j], truth,sim, sim,truth)
             docmd = True
+            added['table'].append(truth)
+            added['index'].append(iname)
         if docmd:
             print cmd
             cur.quick(cmd)
@@ -122,5 +130,17 @@ if __name__=='__main__':
             print cmd
             cur.quick(cmd)
         """
+   
+    cur.commit() 
+    user = es.db.GetUser()
+    utab = np.unique(added['table'])
+    for i in range(len(utab)):
+        cmd = """begin DBMS_STATS.GATHER_TABLE_STATS (ownname => '%s', tabname => '%s'); end;"""%(user.upper(),utab[i].upper())
+        print cmd
+        cur.quick(cmd)
 
+    for i in range(len(added['index'])):
+        cmd = """begin DBMS_STATS.GATHER_INDEX_STATS (ownname => '%s', indname => '%s'); end;"""%(user.upper(),added['index'][i].upper())
+        print cmd
+        cur.quick(cmd)
     cur.commit() 
