@@ -1,0 +1,6 @@
+command: |
+   mpirun -np 14 -hostfile %hostfile% ./DownloadDB.py --table balrog_sva1_rxj2248 --user suchyta1 --destable sva1_coadd_objects --descols des-cols.txt --simcols des-cols.txt
+mode: bycore
+N: 14
+hostfile: auto
+job_name: GetDBTest
