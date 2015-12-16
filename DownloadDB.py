@@ -49,6 +49,7 @@ def GetArgs():
     args = ParseArgs(parser)
     return args
 
+
 def AllOrFile(what, cat, user):
     cols = np.core.defchararray.upper( es.db.ColumnDescribe(cat, user=user)['column_name'] )
     if what!='all':
@@ -66,6 +67,22 @@ def AllOrFile(what, cat, user):
         cols = newcols[cut]
     cut = -( np.core.defchararray.find(cols, 'SYS_')!=-1 )
     return cols[cut]
+
+
+def ColumnSelects(args):
+    truthcols = AllOrFile(args.truthcols, args.truth, args.user)
+   
+    simcols = AllOrFile(args.simcols, args.sim, args.user)
+    cut = -( np.in1d(simcols, truthcols) )
+    simcols = simcols[cut]
+
+    descols = AllOrFile(args.descols, args.destable, None)
+    
+    truthcols = ', '.join(np.core.defchararray.add('truth.',truthcols))
+    simcols = ', '.join(np.core.defchararray.add('sim.',simcols))
+    descols = ', '.join(np.core.defchararray.add('des.',descols))
+
+    return truthcols, simcols, descols
     
 
 
@@ -77,18 +94,7 @@ if __name__=='__main__':
     chunks = truthcols = simcols = descols = None
     if rank==0:
         chunks = cur.quick("select unique(%s) from %s"%(args.chunkby, args.utruth), array=True)['tilename']
-
-        truthcols = AllOrFile(args.truthcols, args.truth, args.user)
-       
-        simcols = AllOrFile(args.simcols, args.sim, args.user)
-        cut = -( np.in1d(simcols, truthcols) )
-        simcols = simcols[cut]
-
-        descols = AllOrFile(args.descols, args.destable, None)
-        
-        truthcols = ', '.join(np.core.defchararray.add('truth.',truthcols))
-        simcols = ', '.join(np.core.defchararray.add('sim.',simcols))
-        descols = ', '.join(np.core.defchararray.add('des.',descols))
+        truthcols, simcols, descols = ColumnSelects(args)
 
     chunks = mpi.Scatter(chunks)
     truthcols, simcols, descols = mpi.Broadcast(truthcols, simcols, descols)
