@@ -30,24 +30,30 @@ def SetupParser():
     parser.add_argument( "-tc", "--truthcols", help="truth column names", default='all')
 
     parser.add_argument( "-ft", "--filetype", help="output file type", default='.fits', choices=['.fits', '.h5'])
-    parser.add_argument( "-o", "--outdir", help="output directory", default=None)
+    parser.add_argument( "-a", "--append", help="Append to the given data", action="store_true")
+    parser.add_argument( "-od", "--dir", help="output directory", default=None)
+    parser.add_argument( "-on", "--name", help="output directory", default=None)
 
     return parser
+
 
 def ParseArgs(parser):
     args = parser.parse_args()
     args.bands = args.bands.split(',')
     if args.user is None:
         args.user = es.db.GetUser()
-    if args.outdir is None:
+
+    if args.dir is None:
         if args.filetype=='.fits':
-            args.outdir = 'FITS'
+            args.dir = 'FITS'
         else:
-            args.outdir = 'HDF%'
+            args.dir = 'HDF5'
+    if args.name is None:
+        args.name = args.table
 
     args.file = []
     for f in ['truth','sim','nosim','des']:
-        args.file.append( os.path.join(args.outdir, '%s-%s%s'%(args.table,f,args.filetype)) )
+        args.file.append( os.path.join(args.dir, '%s-%s%s'%(args.name,f,args.filetype)) )
 
 
     args.truth = '%s_truth'%(args.table)
@@ -157,7 +163,6 @@ def WaitOrWrite(num, rank, args, data):
             break
 
 def WriteData(data, args, num):
-    time.sleep(1)
     file = args.file[num]
 
     if args.filetype=='.fits':
@@ -197,10 +202,10 @@ def GetData(args, chunk, truthcols, simcols, descols, cur, rank):
 
 def FileSetup(args):
     for file in args.file:
-        if os.path.exists(file):
+        if (not args.append) and (os.path.exists(file)):
             os.remove(file)
-    if not os.path.exists(args.outdir):
-        os.makedirs(args.outdir)
+    if not os.path.exists(args.dir):
+        os.makedirs(args.dir)
 
 
 if __name__=='__main__': 
@@ -209,6 +214,7 @@ if __name__=='__main__':
     #chunks = truthcols = simcols = descols = None
    
     if rank==0:
+        print args.table
         cur = desdb.connect()
         chunks = cur.quick("select unique(%s) from %s"%(args.chunkby, args.utruth), array=True)['tilename']
         FileSetup(args)
