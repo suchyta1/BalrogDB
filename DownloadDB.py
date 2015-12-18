@@ -10,6 +10,7 @@ import os
 
 import fitsio
 import esutil
+import numpy.lib.recfunctions as rec
 
 import suchyta_utils as es
 import suchyta_utils.mpi as mpi
@@ -44,10 +45,13 @@ def ParseArgs(parser):
         args.user = es.db.GetUser()
 
     if args.dir is None:
+        args.dir = args.table.lstrip('balrog_')
+        """
         if args.filetype=='.fits':
             args.dir = 'FITS'
         else:
             args.dir = 'HDF5'
+        """
     if args.name is None:
         args.name = args.table
 
@@ -154,16 +158,27 @@ def Work(args, rank):
             GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
             MPI.COMM_WORLD.send([rank, -1], dest=0)
 
-def WaitOrWrite(num, rank, args, data):
+def WaitOrWrite(num, rank, args, data, offset):
     while True:
         msg = MPI.COMM_WORLD.sendrecv([rank,(num,0)], dest=0, source=0)
         if msg==1:
-            WriteData(data,args,num)
+            offset = WriteData(data,args,num, offset)
             MPI.COMM_WORLD.send([rank,(num,1)], dest=0)
             break
+    return offset
 
-def WriteData(data, args, num):
+
+def WriteData(data, args, num, offset):
     file = args.file[num]
+
+    if num < 3:
+        if offset is None:
+            row = fitsio.read_header(args.file[0], ext=-1)['NAXIS2'] - 1
+            offset = fitsio.read(args.file[0], ext=-1, rows=[row])['balrog_id'][0] + 1
+
+        id = data['balrog_index'] + offset
+        tab = np.array( [args.table]*len(data) )
+        data = rec.append_fields(data, ['balrog_id','table'], [id,tab])
 
     if args.filetype=='.fits':
         if not os.path.exists(file):
@@ -172,30 +187,36 @@ def WriteData(data, args, num):
             f = fitsio.FITS(file, 'rw')
             f[-1].append(data)
 
+    return offset
+
 
 def GetData(args, chunk, truthcols, simcols, descols, cur, rank):
     if type(chunk)==np.str_:
         chunk = "'%s'"%(chunk)
 
-    q = "select %s from %s truth where truth.%s=%s"%(truthcols, args.utruth, args.chunkby, chunk)
+    offset = 0
+    if args.append:
+        offset = None
+
+    q = "select %s from %s truth where truth.%s=%s order by truth.balrog_index"%(truthcols, args.utruth, args.chunkby, chunk)
     data = cur.quick(q, array=True)
     t = len(data)
-    WaitOrWrite(0, rank, args, data)
+    offset = WaitOrWrite(0, rank, args, data, offset)
 
-    q = "select %s, %s from %s sim, %s truth where truth.%s=%s and truth.balrog_index=sim.balrog_index"%(simcols, truthcols, args.usim, args.utruth, args.chunkby, chunk)
+    q = "select %s, %s from %s sim, %s truth where truth.%s=%s and truth.balrog_index=sim.balrog_index order by truth.balrog_index"%(simcols, truthcols, args.usim, args.utruth, args.chunkby, chunk)
     data = cur.quick(q, array=True)
     s = len(data)
-    WaitOrWrite(1, rank, args, data)
+    offset = WaitOrWrite(1, rank, args, data, offset)
 
-    q = "select %s, %s from %s sim, %s truth where truth.%s=%s and truth.balrog_index=sim.balrog_index"%(simcols, truthcols, args.unosim, args.utruth, args.chunkby, chunk)
+    q = "select %s, %s from %s sim, %s truth where truth.%s=%s and truth.balrog_index=sim.balrog_index order by truth.balrog_index"%(simcols, truthcols, args.unosim, args.utruth, args.chunkby, chunk)
     data = cur.quick(q, array=True)
     n = len(data)
-    WaitOrWrite(2, rank, args, data)
+    offset = WaitOrWrite(2, rank, args, data, offset)
 
     q = "select %s from %s des where des.%s=%s"%(descols, args.destable, args.chunkby, chunk)
     data = cur.quick(q, array=True)
     d = len(data)
-    WaitOrWrite(3, rank, args, data)
+    offset = WaitOrWrite(3, rank, args, data, offset)
 
     print chunk, t, n, s, d, es.system.GetMaxMemoryUsage()
 

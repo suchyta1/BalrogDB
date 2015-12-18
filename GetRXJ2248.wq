@@ -1,0 +1,6 @@
+command: |
+   mpirun -np 15 -hostfile %hostfile% ./DownloadDB.py --table balrog_sva1_rxj2248 --user suchyta1 --destable sva1_coadd_objects --descols des-cols.txt --simcols des-cols.txt --filetype .fits
+mode: bycore
+N: 15
+hostfile: auto
+job_name: DB-sva1_rxj2248
