@@ -89,7 +89,7 @@ def AllOrFile(what, cat, user, bands):
             s = comp.sub('', newcols[i].lower()).upper()
             if s not in base:
                 base.append(s)
-        newcols = []
+        newcols = np.copy(base)
         for band in bands:
             newcols = np.append( newcols, np.core.defchararray.add(base,'_%s'%(band.upper())) )
         cut = np.in1d(newcols, cols)
