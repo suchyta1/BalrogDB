@@ -1,0 +1,8 @@
+command: |
+   #mpirun -np 100 -hostfile %hostfile% ./DownloadDB.py --table balrog_y1a1_spto_01 --user suchyta1 --destable y1a1_coadd_objects --descols des-cols.txt --simcols des-cols.txt --filetype .fits --name y1a1_spto --dir y1a1_spto
+   #mpirun -np 100 -hostfile %hostfile% ./DownloadDB.py --table balrog_y1a1_spto_02 --user suchyta1 --destable y1a1_coadd_objects --descols des-cols.txt --simcols des-cols.txt --filetype .fits --name y1a1_spto --dir y1a1_spto --append
+   mpirun -np 100 -hostfile %hostfile% ./DownloadDB.py --table balrog_y1a1_spto --user suchyta1 --destable y1a1_coadd_objects --descols des-cols.txt --simcols des-cols.txt --filetype .fits --name y1a1_spto --dir y1a1_spto --append
+mode: bycore
+N: 100
+hostfile: auto
+job_name: get-y1a1-spto
