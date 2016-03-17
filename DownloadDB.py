@@ -191,16 +191,15 @@ def WriteData(data, args, num):
     if args.filetype=='.fits':
         if len(f) < 2:
             f.write(data)
+            f[1].write_key('newmax', offset)
             new = True
         else:
             f[1].append(data)
 
         if num==0:
             newmax = np.amax(data['balrog_id'])
-            oldmax = offset
-            if (not new) and (not args.append):
-                h = f[1].read_header()
-                oldmax = h['newmax']
+            h = f[1].read_header()
+            oldmax = h['newmax']
             if newmax > oldmax:
                 f[1].write_key('newmax', newmax)
 
