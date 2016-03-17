@@ -1,12 +1,12 @@
 command: |
-   mpirun -np 50 -hostfile %hostfile% ./DownloadDB.py --table balrog_y1a1_s82_tab01 --user jelena --destable y1a1_coadd_objects --descols des-cols.txt --simcols des-cols.txt --filetype .fits --name y1a1_s82 --dir y1a1_s82
-   mpirun -np 50 -hostfile %hostfile% ./DownloadDB.py --table balrog_y1a1_s82_tab02 --user jelena --destable y1a1_coadd_objects --descols des-cols.txt --simcols des-cols.txt --filetype .fits --name y1a1_s82 --dir y1a1_s82 --append
-   mpirun -np 50 -hostfile %hostfile% ./DownloadDB.py --table balrog_y1a1_s82_tab03 --user jelena --destable y1a1_coadd_objects --descols des-cols.txt --simcols des-cols.txt --filetype .fits --name y1a1_s82 --dir y1a1_s82 --append
-   mpirun -np 50 -hostfile %hostfile% ./DownloadDB.py --table balrog_y1a1_s82_tab04 --user jelena --destable y1a1_coadd_objects --descols des-cols.txt --simcols des-cols.txt --filetype .fits --name y1a1_s82 --dir y1a1_s82 --append
-   mpirun -np 50 -hostfile %hostfile% ./DownloadDB.py --table balrog_y1a1_s82_tab05 --user jelena --destable y1a1_coadd_objects --descols des-cols.txt --simcols des-cols.txt --filetype .fits --name y1a1_s82 --dir y1a1_s82 --append
-   mpirun -np 50 -hostfile %hostfile% ./DownloadDB.py --table balrog_y1a1_s82_tab06 --user jelena --destable y1a1_coadd_objects --descols des-cols.txt --simcols des-cols.txt --filetype .fits --name y1a1_s82 --dir y1a1_s82 --append
-   mpirun -np 50 -hostfile %hostfile% ./DownloadDB.py --table balrog_y1a1_s82_tab07 --user jelena --destable y1a1_coadd_objects --descols des-cols.txt --simcols des-cols.txt --filetype .fits --name y1a1_s82 --dir y1a1_s82 --append
+   mpirun -np 51 -hostfile %hostfile% ./DownloadDB.py --table balrog_y1a1_s82_tab01 --user jelena --destable y1a1_coadd_objects --descols des-cols.txt --simcols des-cols.txt --filetype .fits --name y1a1_s82 --dir y1a1_s82
+   mpirun -np 51 -hostfile %hostfile% ./DownloadDB.py --table balrog_y1a1_s82_tab02 --user jelena --destable y1a1_coadd_objects --descols des-cols.txt --simcols des-cols.txt --filetype .fits --name y1a1_s82 --dir y1a1_s82 --append --offset
+   mpirun -np 51 -hostfile %hostfile% ./DownloadDB.py --table balrog_y1a1_s82_tab03 --user jelena --destable y1a1_coadd_objects --descols des-cols.txt --simcols des-cols.txt --filetype .fits --name y1a1_s82 --dir y1a1_s82 --append --offset
+   mpirun -np 51 -hostfile %hostfile% ./DownloadDB.py --table balrog_y1a1_s82_tab04 --user jelena --destable y1a1_coadd_objects --descols des-cols.txt --simcols des-cols.txt --filetype .fits --name y1a1_s82 --dir y1a1_s82 --append --offset
+   mpirun -np 51 -hostfile %hostfile% ./DownloadDB.py --table balrog_y1a1_s82_tab05 --user jelena --destable y1a1_coadd_objects --descols des-cols.txt --simcols des-cols.txt --filetype .fits --name y1a1_s82 --dir y1a1_s82 --append --offset
+   mpirun -np 51 -hostfile %hostfile% ./DownloadDB.py --table balrog_y1a1_s82_tab06 --user jelena --destable y1a1_coadd_objects --descols des-cols.txt --simcols des-cols.txt --filetype .fits --name y1a1_s82 --dir y1a1_s82 --append --offset
+   mpirun -np 51 -hostfile %hostfile% ./DownloadDB.py --table balrog_y1a1_s82_tab07 --user jelena --destable y1a1_coadd_objects --descols des-cols.txt --simcols des-cols.txt --filetype .fits --name y1a1_s82 --dir y1a1_s82 --append --offset
 mode: bycore
-N: 50
+N: 51
 hostfile: auto
 job_name: get-y1a1-s82

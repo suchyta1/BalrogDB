@@ -12,8 +12,10 @@ import fitsio
 import esutil
 import numpy.lib.recfunctions as rec
 
-import suchyta_utils as es
+import suchyta_utils.system
+import suchyta_utils.db
 import suchyta_utils.mpi as mpi
+
 from mpi4py import MPI
 
 
@@ -32,6 +34,7 @@ def SetupParser():
 
     parser.add_argument( "-ft", "--filetype", help="output file type", default='.fits', choices=['.fits', '.h5'])
     parser.add_argument( "-a", "--append", help="Append to the given data", action="store_true")
+    parser.add_argument( "-off", "--offset", help="Offset appended balrog_id, use if the tables' balrog_indexes overlap", action="store_true")
     parser.add_argument( "-od", "--dir", help="output directory", default=None)
     parser.add_argument( "-on", "--name", help="output directory", default=None)
 
@@ -42,7 +45,7 @@ def ParseArgs(parser):
     args = parser.parse_args()
     args.bands = args.bands.split(',')
     if args.user is None:
-        args.user = es.db.GetUser()
+        args.user = suchyta_utils.db.GetUser()
 
     if args.dir is None:
         args.dir = args.table.lstrip('balrog_')
@@ -79,8 +82,8 @@ def GetArgs():
     return args
 
 
-def AllOrFile(what, cat, user, bands):
-    cols = np.core.defchararray.upper( es.db.ColumnDescribe(cat, user=user)['column_name'] )
+def AllOrFile(what, cat, user, bands, veto=['SLROK_DET']):
+    cols = np.core.defchararray.upper( suchyta_utils.db.ColumnDescribe(cat, user=user)['column_name'] )
     if what!='all':
         newcols = np.loadtxt(what, dtype=np.str_)
         base = []
@@ -95,6 +98,7 @@ def AllOrFile(what, cat, user, bands):
         cut = np.in1d(newcols, cols)
         cols = newcols[cut]
     cut = -( np.core.defchararray.find(cols, 'SYS_')!=-1 )
+    cut = cut & -( np.in1d(cols,veto) )
     return cols[cut]
 
 
@@ -158,67 +162,74 @@ def Work(args, rank):
             GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
             MPI.COMM_WORLD.send([rank, -1], dest=0)
 
-def WaitOrWrite(num, rank, args, data, offset):
+def WaitOrWrite(num, rank, args, data):
     while True:
         msg = MPI.COMM_WORLD.sendrecv([rank,(num,0)], dest=0, source=0)
         if msg==1:
-            offset = WriteData(data,args,num, offset)
+            WriteData(data,args,num)
             MPI.COMM_WORLD.send([rank,(num,1)], dest=0)
             break
-    return offset
 
 
-def WriteData(data, args, num, offset):
+def WriteData(data, args, num):
+    offset = -1
     file = args.file[num]
 
-    if num < 3:
-        if offset is None:
-            row = fitsio.read_header(args.file[0], ext=-1)['NAXIS2'] - 1
-            offset = fitsio.read(args.file[0], ext=-1, rows=[row])['balrog_id'][0] + 1
+    if args.filetype=='.fits':
+        f = fitsio.FITS(file, 'rw')
+        if args.append:
+            h = f[1].read_header()
+            if args.offset and (num < 3):
+                offset = h['max_id']
 
-        id = data['balrog_index'] + offset
+    if num < 3:
+        id = data['balrog_index'] + offset + 1
         tab = np.array( [args.table]*len(data) )
         data = rec.append_fields(data, ['balrog_id','table'], [id,tab])
 
+    new = False
     if args.filetype=='.fits':
-        if not os.path.exists(file):
-            f = esutil.io.write(file, data)
+        if len(f) < 2:
+            f.write(data)
+            new = True
         else:
-            f = fitsio.FITS(file, 'rw')
-            f[-1].append(data)
+            f[1].append(data)
 
-    return offset
+        if num==0:
+            newmax = np.amax(data['balrog_id'])
+            oldmax = offset
+            if (not new) and (not args.append):
+                h = f[1].read_header()
+                oldmax = h['newmax']
+            if newmax > oldmax:
+                f[1].write_key('newmax', newmax)
 
 
 def GetData(args, chunk, truthcols, simcols, descols, cur, rank):
     if type(chunk)==np.str_:
         chunk = "'%s'"%(chunk)
 
-    offset = 0
-    if args.append:
-        offset = None
-
     q = "select %s from %s truth where truth.%s=%s order by truth.balrog_index"%(truthcols, args.utruth, args.chunkby, chunk)
     data = cur.quick(q, array=True)
     t = len(data)
-    offset = WaitOrWrite(0, rank, args, data, offset)
+    WaitOrWrite(0, rank, args, data)
 
     q = "select %s, %s from %s sim, %s truth where truth.%s=%s and truth.balrog_index=sim.balrog_index order by truth.balrog_index"%(simcols, truthcols, args.usim, args.utruth, args.chunkby, chunk)
     data = cur.quick(q, array=True)
     s = len(data)
-    offset = WaitOrWrite(1, rank, args, data, offset)
+    WaitOrWrite(1, rank, args, data)
 
     q = "select %s, %s from %s sim, %s truth where truth.%s=%s and truth.balrog_index=sim.balrog_index order by truth.balrog_index"%(simcols, truthcols, args.unosim, args.utruth, args.chunkby, chunk)
     data = cur.quick(q, array=True)
     n = len(data)
-    offset = WaitOrWrite(2, rank, args, data, offset)
+    WaitOrWrite(2, rank, args, data)
 
     q = "select %s from %s des where des.%s=%s"%(descols, args.destable, args.chunkby, chunk)
     data = cur.quick(q, array=True)
     d = len(data)
-    offset = WaitOrWrite(3, rank, args, data, offset)
+    WaitOrWrite(3, rank, args, data)
 
-    print chunk, t, n, s, d, es.system.GetMaxMemoryUsage()
+    print chunk, t, n, s, d, suchyta_utils.system.GetMaxMemoryUsage()
 
 
 def FileSetup(args):
@@ -233,7 +244,7 @@ if __name__=='__main__':
     rank = MPI.COMM_WORLD.Get_rank()
     args = GetArgs()
     #chunks = truthcols = simcols = descols = None
-   
+  
     if rank==0:
         print args.table
         cur = desdb.connect()
@@ -242,6 +253,16 @@ if __name__=='__main__':
         Serve(chunks)
     else:
         Work(args, rank)
+
+    if rank==0:
+        for i in range(len(args.file)):
+            if i==3:
+                break
+            f = fitsio.FITS(args.file[i], 'rw')
+            if i==0:
+                max = f[1].read_header()['newmax']
+            f[1].write_key('max_id', max)
+
 
     #chunks = mpi.Scatter(chunks)
     #cols = mpi.Broadcast(truthcols, simcols, descols)
