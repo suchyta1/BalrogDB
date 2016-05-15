@@ -3,7 +3,7 @@
 import sys
 import argparse
 import desdb
-import suchyta_utils as es
+import suchyta_utils.db
 import numpy as np
 
 def SetupParser():
@@ -41,7 +41,7 @@ if __name__=='__main__':
     # Add a primary key for balrog_index in the truth table
     docmd = False
     ptname = '%s_p'%(truth)
-    cons = es.db.ConstraintDescribe(truth)
+    cons = suchyta_utils.db.ConstraintDescribe(truth)
     found = (ptname.upper() in cons['constraint_name'])
     if args.drop and found:
         cmd = "ALTER TABLE %s DROP CONSTRAINT %s" %(truth,ptname)
@@ -56,7 +56,7 @@ if __name__=='__main__':
     """
     docmd = False
     psname = '%s_p'%(sim)
-    cons = es.db.ConstraintDescribe(sim)
+    cons = suchyta_utils.db.ConstraintDescribe(sim)
     found = (psname.upper() in cons['constraint_name'])
     if args.drop and found:
         cmd = "ALTER TABLE %s DROP CONSTRAINT %s" %(sim,psname)
@@ -76,7 +76,7 @@ if __name__=='__main__':
     # Add indexes in each table on columns
     for i in range(len(tables)):
         tname = '%s_%s'%(args.table, tables[i])
-        inds = es.db.IndexDescribe(tname)
+        inds = suchyta_utils.db.IndexDescribe(tname)
 
         for j in range(len(columns)):
             iname = '%s_%s%s'%(args.indexname, tnames[i], cnames[j])
@@ -97,7 +97,7 @@ if __name__=='__main__':
   
 
     # Add an index on joining the truth table and the sim table
-    inds = es.db.IndexDescribe(truth)
+    inds = suchyta_utils.db.IndexDescribe(truth)
     for j in range(len(columns)):
         iname = '%s_j%s'%(args.indexname,cnames[j])
         found = (iname.upper() in inds['index_name'])
@@ -132,7 +132,7 @@ if __name__=='__main__':
         """
    
     cur.commit() 
-    user = es.db.GetUser()
+    user = suchyta_utils.db.GetUser()
     utab = np.unique(added['table'])
     for i in range(len(utab)):
         cmd = """begin DBMS_STATS.GATHER_TABLE_STATS (ownname => '%s', tabname => '%s'); end;"""%(user.upper(),utab[i].upper())
