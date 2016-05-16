@@ -1,0 +1,12 @@
+command: |
+   mpirun -np 50 -hostfile %hostfile% ./Partition.py --table balrog_y1a1_s82_tab01 --owner jelena --out b_y1a1_s82 --user emhuff --create
+   mpirun -np 50 -hostfile %hostfile% ./Partition.py --table balrog_y1a1_s82_tab02 --owner jelena --out b_y1a1_s82 --user emhuff --offset
+   mpirun -np 50 -hostfile %hostfile% ./Partition.py --table balrog_y1a1_s82_tab03 --owner jelena --out b_y1a1_s82 --user emhuff --offset
+   mpirun -np 50 -hostfile %hostfile% ./Partition.py --table balrog_y1a1_s82_tab04 --owner jelena --out b_y1a1_s82 --user emhuff --offset
+   mpirun -np 50 -hostfile %hostfile% ./Partition.py --table balrog_y1a1_s82_tab05 --owner jelena --out b_y1a1_s82 --user emhuff --offset
+   mpirun -np 50 -hostfile %hostfile% ./Partition.py --table balrog_y1a1_s82_tab06 --owner jelena --out b_y1a1_s82 --user emhuff --offset
+   mpirun -np 50 -hostfile %hostfile% ./Partition.py --table balrog_y1a1_s82_tab07 --owner jelena --out b_y1a1_s82 --user emhuff --offset
+mode: bycore
+N: 50
+hostfile: auto
+job_name: parition-s82

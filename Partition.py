@@ -5,6 +5,7 @@ import argparse
 import numpy as np
 import desdb
 import os
+import sys
 
 import fitsio
 import numpy.lib.recfunctions as rec
@@ -132,5 +133,6 @@ if __name__=='__main__':
             sel = "select %s from %s.%s where tilename='%s'"%(sels_off, args.owner, table, tile)
             ins = 'insert into %s %s'%(out, sel)
             cur.quick(ins)
-            print tile, offset
             cur.commit()
+        if (MPI.COMM_WORLD.Get_rank()==0):
+            print table
