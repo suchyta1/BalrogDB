@@ -1,0 +1,6 @@
+command: |
+   mpirun -np 170 -hostfile %hostfile% ./DownloadDB.py --table b_y1a1_s82 --user emhuff --destable y1a1_coadd_objects --descols des-cols.txt --simcols des-cols.txt --filetype .fits --name y1a1_s82 --dir y1a1_s82-full
+mode: bycore
+N: 170
+hostfile: auto
+job_name: get-y1a1-s82

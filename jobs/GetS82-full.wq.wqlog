@@ -1,0 +1,928 @@
+waiting: Not enough free cores.
+ok
+executing on host: astro0001 with pid: 13641
+tcgetattr: Inappropriate ioctl for device
+b_y1a1_s82
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+Traceback (most recent call last):
+  File "./DownloadDB.py", line 254, in <module>
+    Work(args, rank)
+  File "./DownloadDB.py", line 162, in Work
+    GetData(args, cmd, args.cols[0], args.cols[1], args.cols[2], cur, rank)
+  File "./DownloadDB.py", line 227, in GetData
+    data = cur.quick(q, array=True)
+  File "/astro/u/esuchyta/.local/lib/python2.7/site-packages/desdb/desdb.py", line 142, in quick
+    curs.execute(query)
+cx_Oracle.DatabaseError: ORA-00936: missing expression
+
+require:        {'N': 84, 'hostfile': 'auto', 'job_name': 'get-y1a1-s82', 'mode': 'bycore'}
+command:        'notify'
+user:           'esuchyta'
+notification:   'done'
+commandline:    'mpirun -np 84 -hostfile %hostfile% ./DownloadDB.py --table b_y1a1_s82 --user emhuff --destable y1a1_coadd_objects --descols des-cols.txt --simcols des-cols.txt --filetype .fits --name y1a1_s82 --dir y1a1_s82-full\n'
+pid:            13641
+response:       'OK'
+Unexpected error: <type 'exceptions.SystemExit'>
+mpirun -np 84 -hostfile %hostfile% ./DownloadDB.py --table b_y1a1_s82 --user emhuff --destable y1a1_coadd_objects --descols des-cols.txt --simcols des-cols.txt --filetype .fits --name y1a1_s82 --dir y1a1_s82-full
+

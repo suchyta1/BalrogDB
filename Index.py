@@ -51,7 +51,7 @@ if __name__=='__main__':
         docmd = True
     if docmd:
         print cmd
-        cur.quick(cmd)
+        #cur.quick(cmd)
 
     """
     docmd = False
@@ -93,7 +93,7 @@ if __name__=='__main__':
                 added['index'].append(iname)
             if docmd:
                 print cmd
-                cur.quick(cmd)
+                #cur.quick(cmd)
   
 
     # Add an index on joining the truth table and the sim table
@@ -107,7 +107,8 @@ if __name__=='__main__':
             cmd = "DROP INDEX %s" %(iname)
             docmd = True
         elif (not args.drop) and (not found):
-            cmd = "CREATE BITMAP INDEX %s ON %s(%s.%s) FROM %s, %s WHERE %s.balrog_index=%s.balrog_index" %(iname, sim,truth,columns[j], truth,sim, sim,truth)
+            #cmd = "CREATE BITMAP INDEX %s ON %s(%s.%s) FROM %s, %s WHERE %s.balrog_index=%s.balrog_index" %(iname, sim,truth,columns[j], truth,sim, sim,truth)
+            cmd = "CREATE BITMAP INDEX %s ON %s(%s.%s) FROM %s, %s WHERE %s.balrog_index=%s.balrog_index local" %(iname, sim,truth,columns[j], truth,sim, sim,truth)
             docmd = True
             added['table'].append(truth)
             added['index'].append(iname)

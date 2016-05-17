@@ -1,0 +1,6 @@
+command: |
+   mpirun -np 99 -hostfile %hostfile% ./DownloadDB.py --table balrog_y1a1_sptn_01 --user suchyta1 --destable y1a1_coadd_objects --descols des-cols.txt --simcols des-cols.txt --filetype .fits --name y1a1_sptn --dir y1a1_sptn
+mode: bycore
+N: 99
+hostfile: auto
+job_name: get-y1a1-sptn
