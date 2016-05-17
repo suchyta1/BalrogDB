@@ -11,6 +11,7 @@ def SetupParser():
     parser.add_argument( "-t", "--table", help="DB table name to download", required=True)
     parser.add_argument( "-n", "--indexname", help="base string for index name", default=None)
     parser.add_argument( "-d", "--drop", help="Drop instead of create", action="store_true")
+    parser.add_argument( "-l", "--local", help="Local bitmap index", action="store_true")
     return parser
 
 def ParseArgs(parser):
@@ -51,7 +52,7 @@ if __name__=='__main__':
         docmd = True
     if docmd:
         print cmd
-        #cur.quick(cmd)
+        cur.quick(cmd)
 
     """
     docmd = False
@@ -93,7 +94,7 @@ if __name__=='__main__':
                 added['index'].append(iname)
             if docmd:
                 print cmd
-                #cur.quick(cmd)
+                cur.quick(cmd)
   
 
     # Add an index on joining the truth table and the sim table
@@ -107,8 +108,10 @@ if __name__=='__main__':
             cmd = "DROP INDEX %s" %(iname)
             docmd = True
         elif (not args.drop) and (not found):
-            #cmd = "CREATE BITMAP INDEX %s ON %s(%s.%s) FROM %s, %s WHERE %s.balrog_index=%s.balrog_index" %(iname, sim,truth,columns[j], truth,sim, sim,truth)
-            cmd = "CREATE BITMAP INDEX %s ON %s(%s.%s) FROM %s, %s WHERE %s.balrog_index=%s.balrog_index local" %(iname, sim,truth,columns[j], truth,sim, sim,truth)
+            if args.local:
+                cmd = "CREATE BITMAP INDEX %s ON %s(%s.%s) FROM %s, %s WHERE %s.balrog_index=%s.balrog_index local" %(iname, sim,truth,columns[j], truth,sim, sim,truth)
+            else:
+                cmd = "CREATE BITMAP INDEX %s ON %s(%s.%s) FROM %s, %s WHERE %s.balrog_index=%s.balrog_index" %(iname, sim,truth,columns[j], truth,sim, sim,truth)
             docmd = True
             added['table'].append(truth)
             added['index'].append(iname)

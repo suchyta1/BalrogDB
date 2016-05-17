@@ -1,0 +1,7 @@
+command: |
+   mpirun -np 100 -hostfile %hostfile% ./Partition2.py --tables balrog_y1a1_s82_tab01,balrog_y1a1_s82_tab02,balrog_y1a1_s82_tab03,balrog_y1a1_s82_tab04,balrog_y1a1_s82_tab05,balrog_y1a1_s82_tab06,balrog_y1a1_s82_tab07,balrog_y1a1_spto_01,balrog_y1a1_spto,balrog_y1a1_spto_02,balrog_y1a1_spto_03,balrog_y1a1_spto_04,balrog_y1a1_sptn_01 --owners jelena,jelena,jelena,jelena,jelena,jelena,jelena,suchyta1,suchyta1,suchyta1,suchyta1,suchyta1,suchyta1 --out balrog_y1a1 --user emhuff --create --offsets 0,last,last,last,last,last,last,last,0,0,0,0,last
+
+mode: bycore
+N: 100
+hostfile: auto
+job_name: partition-spt
